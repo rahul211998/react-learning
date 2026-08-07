@@ -5,6 +5,7 @@ import Companies from './fortailwind/components/workingLeners/Companies'
 import { useState } from 'react'
 
 function App() {
+  const [myHooks, setMyHooks] = useState("");
   const [main, setMain] = useState("")
   return (
     <div className='flex'>
