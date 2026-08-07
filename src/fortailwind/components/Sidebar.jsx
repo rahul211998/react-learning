@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 const Sidebar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [loading, setLoading] = useState(false);
+  // const [loading, setLoading] = useState(false);
 
   return (
     <>
