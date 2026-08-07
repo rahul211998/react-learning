@@ -6,6 +6,7 @@ import { useState } from 'react'
 
 function App() {
   const [myHooks, setMyHooks] = useState("");
+  const [main, setMain] = useState("")
   return (
     <div className='flex'>
       <Sidebar/>
