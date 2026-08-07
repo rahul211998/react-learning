@@ -2,8 +2,10 @@ import './App.css'
 import Sidebar from './fortailwind/components/Sidebar'
 import DashBoardPage from './fortailwind/DashBoardPage'
 import Companies from './fortailwind/components/workingLeners/Companies'
+import { useState } from 'react'
 
 function App() {
+  const [myHooks, setMyHooks] = useState("");
   return (
     <div className='flex'>
       <Sidebar/>
