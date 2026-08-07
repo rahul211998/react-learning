@@ -1,0 +1,60 @@
+//npm create vite@latest
+//Select: ESLint
+//npm run dev
+//npm install tailwindcss @tailwindcss/vit
+
+// import { defineConfig } from 'vite'
+// import react from '@vitejs/plugin-react'
+// import tailwindcss from '@tailwindcss/vite'
+
+// export default defineConfig({
+//   plugins: [
+//     react(),
+//     tailwindcss(),
+//   ],
+// })
+
+
+
+
+
+// Prefix	Minimum Width	Device
+// (none)	0px	Mobile (default)
+// sm:	640px	Large phones
+// md:	768px	Tablets
+// lg:	1024px	Laptops
+// xl:	1280px	Desktops
+// 2xl:	1536px	Large monitors
+
+
+// Class	Meaning	Example
+// full	Exactly 100%	w-full
+// max	Maximum allowed size	max-w-full
+// min	Minimum allowed size	min-h-screen
+// auto	Browser decides automatically	w-auto
+
+// w-full → Take the full available width.
+// max-w-md → But never become wider than md.
+// min-h-screen → Be at least as tall as the screen.
+// mx-auto → Center horizontally.
+
+
+translate-x-0
+translate = move from one place to another
+It doesn't change the size or rotate the element—it simply moves it.
+
+
+Other transform operations
+
+CSS has several transform functions:
+
+transform: translateX(50px);
+transform: rotate(45deg);
+transform: scale(1.5);
+transform: skewX(20deg);
+
+
+translate-x-10   // Move
+rotate-45        // Rotate
+scale-110        // Zoom
+skew-x-12        // Skew

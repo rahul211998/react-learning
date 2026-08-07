@@ -1,14 +1,17 @@
 import './App.css'
-import UEpageone from './components/hooks/useeffect/UEpageone'
-// import ParentPage from './components/rendering/ancestersrendering/ParentPage'
-// import StateRendering from "./components/rendering/StateRendering"
+import Sidebar from './fortailwind/components/Sidebar'
+import DashBoardPage from './fortailwind/DashBoardPage'
+import Companies from './fortailwind/components/workingLeners/Companies'
 
 function App() {
   return (
-    <div>
-      {/* <StateRendering/> */}
-      {/* <ParentPage/> */}
-      <UEpageone/>
+    <div className='flex'>
+      <Sidebar/>
+
+      <div className='md:ml-64 flex-1'>
+        <DashBoardPage/>
+        <Companies/>
+      </div>
     </div>
   )
 }
@@ -25,18 +28,4 @@ export default App
 
 
 
-//npm create vite@latest
-//Select: ESLint
-//npm run dev
-//npm install tailwindcss @tailwindcss/vit
 
-// import { defineConfig } from 'vite'
-// import react from '@vitejs/plugin-react'
-// import tailwindcss from '@tailwindcss/vite'
-
-// export default defineConfig({
-//   plugins: [
-//     react(),
-//     tailwindcss(),
-//   ],
-// })
