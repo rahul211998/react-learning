@@ -2,6 +2,9 @@ import React, { useState } from 'react'
 // import Companies from './components/workingLeners/Companies'
 
 const DashBoardPage = () => {
+  const location = window.location;
+
+  console.log("location",location)
     
   return (
     <div className='px-2 py-1 mb-2'>

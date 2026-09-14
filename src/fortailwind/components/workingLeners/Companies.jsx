@@ -3,6 +3,10 @@ import { useState ,useEffect } from 'react'
 
 const Companies = () => {
 
+  const [anime, setAnime] = useState("");
+  const [gender, setGender] = useState("");
+  const [isAccepted, setIsAccepted] = useState(false);
+
         const [companyImages, setCompanyImages] = useState({
             ibm1 : "https://www.ibm.com/brand/experience-guides/developer/8f4e3cc2b5d52354a6d43c8edba1e3c9/02_8-bar-reverse.svg",
     
@@ -11,11 +15,28 @@ const Companies = () => {
             infosis : "https://toppng.com/uploads/preview/infosys-limited-vector-logo-11574259008tncnrnxj7c.png"
             
         })
+
+        const chooseGenderFunction = (e) => {
+          const {name, value} = e.target;
+
+          console.log("name",name);
+          console.log("value",value);
+
+          setGender(name)
+        }
+
+        const selectLanguage = (e) => {
+          const {name , value} = e.target;
+
+          if(name === 'react js'){
+            setIsAccepted(true)
+          }
+        }
   return (
     <div className='px-2 py-1 mb-2'>
 
         {/* companies */}
-  <div className='bg-blue-950 my-2 px-2 py-3 rounded-2xl relative'>
+  {/* <div className='bg-blue-950 my-2 px-2 py-3 rounded-2xl relative'>
     <div>
         <h2 className='text-white text-center font-medium '>OUR LEARNERS WORK AT</h2>
     </div>
@@ -80,9 +101,39 @@ const Companies = () => {
         <button className='bg-blue-500 mt-1 px-3 py-1.5 rounded font-medium md:text-xl text-white lg:px-5 lg:py-3'>Apply Now</button>
     </div>
     
-  </div> 
+  </div>  */}
   {/* -bottom-4 left-1/2 -translate-x-1/2 */}
 
+  <div className='text-black bg-amber-500'>
+    <select name="" value={anime} onChange={e => setAnime(e.target.value)} className='w-25 bg-blue-400' id="">
+      <option value=""></option>
+      <option value="goku">goku</option>
+      <option value="vegeta">vegeta</option>
+      <option value="naruto">naruto</option>
+    </select>
+  </div>
+  <h1>{anime}</h1>
+
+  {/* radio button */}
+
+  <div className='flex gap-5'>
+    <div>
+      <input type="radio" name='male' checked = {gender === 'male'} value={gender} onChange={chooseGenderFunction}  /> Male
+    </div>
+
+        <div>
+      <input type="radio" name='female' checked = {gender === 'female'} value={gender} onChange={chooseGenderFunction} /> Female
+    </div>
+  </div>
+  <h1>{gender}</h1>
+
+
+  <div>
+    <div className='flex gap-5'>
+      <input type="checkbox" name = "react js"   value="react js" checked = {isAccepted === true} onChange={selectLanguage}/>react js
+      <input type="checkbox" name = "python" value="python"  checked = {isAccepted === true} onChange={selectLanguage}/>python
+    </div>
+  </div>
     </div>
   )
 }
